@@ -1,0 +1,11 @@
+# os
+.idea/
+
+# database
+db.sqlite3
+
+# settings
+config/settings.py
+
+# virtualenv
+venv
