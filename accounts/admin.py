@@ -13,4 +13,6 @@ CustomUser = get_user_model()
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     model = CustomUser
-    list_display = ('email', 'username',)
+    list_display = ('email', 'username', 'first_name', 'last_name', 'is_staff', 'is_active',)
+    list_filter = ('is_active', 'is_staff')
+    search_fields = ('username', 'email',)
