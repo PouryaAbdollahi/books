@@ -9,3 +9,6 @@ config/local_settings.py
 
 # virtualenv
 venv
+
+# static
+static/

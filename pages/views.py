@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 
 
 # Create your views here.
 
 
-class HomePageView(ListView):
+class HomePageView(TemplateView):
     template_name = 'pages/home.html'
 
-    def get_queryset(self):
-        pass
+
+class AboutUsPageView(TemplateView):
+    template_name = 'pages/about.html'
