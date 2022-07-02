@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),  # django built in auth app
     path('', include('pages.urls')),
-
+    path('accounts/', include('accounts.urls')),
 ]
