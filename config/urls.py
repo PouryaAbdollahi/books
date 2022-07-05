@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # allauth package built urls
     path('', include('pages.urls')),
+    path('books/', include('books.urls'))
 ]

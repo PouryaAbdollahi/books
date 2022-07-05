@@ -4,10 +4,10 @@
 {% block main %}
 <h1>Home Page</h1>
 {% if user.is_authenticated %}
-    <h3>Hi, {{ user.email }}</h3>
+    <h2>Hi, {{ user.email }}</h2>
     <a href="{% url 'account_logout' %}"></a>
     {% else %}
-    <h3>You're not logged in</h3>
+    <h2>You're not logged in</h2>
     <a href="{% url 'account_login' %}">Login</a><br>
     <a href="{% url 'account_signup' %}">Signup</a>
 {% endif %}

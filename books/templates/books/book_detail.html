@@ -1,0 +1,9 @@
+{% extends 'pages/_base.html' %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block main %}
+<div>
+<h3 style="color: black">{{ book.title }}</h3>
+<p>{{ book.author }}</p>
+<p>{{ book.price }} $</p>
+</div>
+{% endblock %}
