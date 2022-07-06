@@ -6,4 +6,14 @@
 <p>{{ book.author }}</p>
 <p>{{ book.price }} $</p>
 </div>
+<hr>
+   <div>
+   {% for rev in book.reviews.all %}
+    <div>
+    <span>{{ rev.author }}</span>
+    <p>{{ rev.content }}</p>
+    </div>
+   {% endfor %}
+
+   </div>
 {% endblock %}
