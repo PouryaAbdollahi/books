@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 class Book(models.Model):
     title = models.CharField(max_length=64)
     author = models.CharField(max_length=128)
+    cover = models.ImageField(upload_to='book_cover', blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):

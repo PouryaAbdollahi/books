@@ -12,3 +12,6 @@ venv
 
 # static
 static/
+
+# media
+media/
