@@ -1,10 +1,6 @@
 {% extends 'pages/_base.html' %}
 {% block title %}Books{% endblock %}
 {% block main %}
-    <form action="{% url 'books:search_result' %}" method="get" class="from-inline mt-2 mt-md-0">
-        <input type="text" name="q" placeholder="search" class="from-control mr-sm-2">
-        <button type="submit">Search</button>
-    </form>
 {% for book in books %}
     <div>
     <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>

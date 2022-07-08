@@ -3,6 +3,11 @@
 {% block title %}Home{% endblock %}
 {% block main %}
 <h1>Home Page</h1>
+    <form action="{% url 'books:search_result' %}" method="get" class="from-inline mt-2 mt-md-0">
+        <input type="text" name="q" placeholder="search" class="from-control mr-sm-2">
+        <button type="submit">Search</button>
+    </form>
+
 {% if user.is_authenticated %}
     <h2>Hi, {{ user.email }}</h2>
     <a href="{% url 'account_logout' %}"></a>

@@ -21,10 +21,11 @@ class BookDetailView(LoginRequiredMixin, DetailView):
     login_url = 'account_login'
 
 
-class SearchListView(ListView):
+class SearchListView(LoginRequiredMixin, ListView):
     model = Book
     context_object_name = 'books'
     template_name = 'pages/search-result.html'
+    login_url = 'account_login'
 
     def get_queryset(self):
         query = self.request.GET.get('q')
