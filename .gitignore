@@ -4,9 +4,6 @@
 # database
 db.sqlite3
 
-# settings
-config/local_settings.py
-
 # virtualenv
 venv
 
